@@ -44,9 +44,6 @@ The updated system is containerized using Docker and orchestrated with Docker Co
 - **PostgreSQL Databases**: Dedicated databases for users, devices, communication, and chat.
 - **RabbitMQ**: Facilitates communication between microservices.
 
-### UML Deployment Diagram
-The deployment diagram illustrates the communication between the frontend, backend microservices, and databases. It highlights the addition of the Chat Microservice and the Authorization Component.
-
 ## Functional Requirements
 1. **User Management**:
    - User registration, login, update, and deletion.
