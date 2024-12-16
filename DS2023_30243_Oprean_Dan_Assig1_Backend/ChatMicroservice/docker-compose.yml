@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  application-chatservice:
+    build: .
+    ports:
+      - "8090:8090"
+    networks:
+      - demo_net
+
+networks:
+  demo_net:
+    external:
+      name: demo_net
+
+volumes:
+  postgres-data-user:

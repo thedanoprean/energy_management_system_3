@@ -1,0 +1,19 @@
+.dashboard-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dashboard-button {
+  background-color: #4285f4;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #0063cc;
+}

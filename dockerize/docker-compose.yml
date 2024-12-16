@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+  frontend-container:
+      container_name: frontend-container
+      image: frontend
+      ports:
+        - '7000:80'
+

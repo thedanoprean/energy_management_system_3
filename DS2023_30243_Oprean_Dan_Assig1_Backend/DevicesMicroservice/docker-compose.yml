@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    hostname: rabbitmq
+    container_name: deviceservice_rabbitmq_1
+    image: rabbitmq:management
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    networks:
+      - demo_net
+
+  database-deviceservice:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: devicesdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-data-user:/var/lib/postgresql/data
+    networks:
+      - demo_net
+
+  application-deviceservice:
+    build: .
+    ports:
+      - "8087:8087"
+    depends_on:
+      - database-deviceservice
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database-deviceservice:5432/devicesdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - demo_net
+
+networks:
+  demo_net:
+    external:
+      name: demo_net
+
+volumes:
+  postgres-data-user:

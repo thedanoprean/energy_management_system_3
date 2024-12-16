@@ -1,0 +1,13 @@
+.message-container {
+  overflow-y: auto;
+  max-height: 300px; /* Adjust as needed */
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Add more styles as needed */
