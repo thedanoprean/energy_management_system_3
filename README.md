@@ -1,4 +1,4 @@
-# Energy Management System (EMS) - Extended Version
+# Energy Management System - Extended Version
 
 ## Description
 This project extends the existing Energy Management System (EMS) by introducing a **Chat Microservice** and an **Authorization Component**. The EMS continues to serve as a robust solution for managing users and their smart energy metering devices, while now also supporting real-time communication and enhanced security.
